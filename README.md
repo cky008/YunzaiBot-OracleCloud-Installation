@@ -1,6 +1,8 @@
 # 在Oracle Linux上部署Yunzai Bot v3保姆式教程
 
-[在Oracle Linux上部署Yunzai Bot v3保姆式教程 – 肚 (iocky.com)](https://iocky.com/index.php/2023/02/28/在oracle-linux上部署yunzai-bot-v3保姆式教程/) [Github](https://github.com/cky008/YunzaiBot-OracleCloud-Installation) [gitee](https://gitee.com/cky008/YunzaiBot-OracleCloud-Installation) 
+去我的博客查看本文：[在Oracle Linux上部署Yunzai Bot v3保姆式教程 – 肚 (iocky.com)](https://iocky.com/index.php/2023/02/28/在oracle-linux上部署yunzai-bot-v3保姆式教程/) 
+
+本文也在[Github](https://github.com/cky008/YunzaiBot-OracleCloud-Installation)与[gitee](https://gitee.com/cky008/YunzaiBot-OracleCloud-Installation)可用。
 
 ## 初始配置
 
@@ -89,7 +91,7 @@ chmod 777 node18
 vim /etc/profile
 ```
 
-在弹出的vim窗口按**i**进入编辑模式，在末尾加上如下内容，加完之后**Esc**推出编辑模式，然后**:wq**回车保存退出。
+在弹出的vim窗口按**i**进入编辑模式，在末尾加上如下内容，加完之后**Esc**推出编辑模式，然后`:wq`回车保存退出。
 
 ```
 export NODE_HOME=/root/node18
@@ -103,7 +105,7 @@ export PATH=$NODE_HOME/bin:$PATH
 source /etc/profile
 ```
 
-可以通过 **node -v** 和 **npm -v** 判断是否成功安装。
+可以通过 ```node -v``` 和 ```npm -v``` 判断是否成功安装。
 
 然后安装pnpm和cnpm：
 
@@ -138,7 +140,7 @@ gpgcheck=1
 enabled=1
 ```
 
-依旧是编辑完成后**:wq**保存退出，然后执行以下指令就可以成功安装chromium了：
+依旧是编辑完成后:wq保存退出，然后执行以下指令就可以成功安装chromium了：
 
 ```
 sudo yum install google-chrome
@@ -197,17 +199,17 @@ node app
 
 这样一来我们就成功安装上了。
 
-接下来是运行**node app**后常见的问题解法，实际上大部分官方文档里都有，我就遇到了一个问题：
+接下来是运行`node app`后常见的问题解法，实际上大部分官方文档里都有，我就遇到了一个问题：
 
 ### 登陆QQ失败解决方案
 
 解决方法如下，来自[这个文档](https://gitee.com/bling_yshs/Yunzai-v3-Installation-Steps)：
 
 1. 在自己的常用电脑上下载这个文件：[QQ验证v1.0.4.zip](https://puguying-my.sharepoint.com/:u:/g/personal/fa2nica_wr_puguying_cn/Ebuu3PPnhuRHjT5-fbNcpsgB_2gS7fgY1LKNHy6wwb2W9g?e=aw0zTM)
-2. 解压，运行 `**密码登录.exe**`
+2. 解压，运行 `密码登录.exe`
 3. 根据程序提示，输入自己小号的账号和密码
 4. 如果遇到验证码，请选择扫码验证(要用手机登录小号的 QQ 扫码哦)(放大后如果二维码消失的话，可以在目录里找到 `qrcode.png` 打开来扫)
-5. 检查目录，会发现会多出一个QQ`号文件夹`
+5. 检查目录，会发现会多出一个QQ号文件夹`
 6. 把整个文件夹复制到 `Yunzai-bot/data` 里，替换掉原来的文件夹就行(这个操作可以通过宝塔完成，很方便)
 
 登陆过程中可能还需要安装一个滑动验证码app.apk，链接在命令行里就有，如果挂了，可以从[这里](https://puguying-my.sharepoint.com/:u:/g/personal/fa2nica_wr_puguying_cn/EUIYlB8RAkdKvNDwHDUl77QBaBZB0pZanp0mS16zXzJpiw?e=StzIUt)下载，使用很明了。
@@ -236,7 +238,7 @@ git clone --depth=1 https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin.git ./plugins/x
 pnpm add promise-retry -w` 再 `pnpm add superagent -w
 ```
 
-锅巴插件的默认端口是50831，记得去宝塔里放行这个端口（安全里面），如果先前不是放开全部规则的，也记得在Oracle Cloud里放行这个端口。不同插件使用详细请见他们各自的仓库～
+锅巴插件的默认端口是`50831`，记得去宝塔里放行这个端口（安全里面），如果先前不是放开全部规则的，也记得在Oracle Cloud里放行这个端口。不同插件使用详细请见他们各自的仓库～
 
 ### 安装[TRSS 插件 (TRSS-Plugin)](https://yunzai.trss.me/):
 
@@ -340,6 +342,8 @@ To exit from the Python virtual environment, run the following command:
 ```
 deactivate
 ```
+
+用同样的方法也可以安装任何版本的python，只需要把3.10.9改成你想要的版本号即可。  
 
 #### 安装其他环境与插件
 
