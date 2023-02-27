@@ -1,6 +1,6 @@
 # 在Oracle Linux上部署Yunzai Bot v3保姆式教程
 
-[在Oracle Linux上部署Yunzai Bot v3保姆式教程 – 肚 (iocky.com)](https://iocky.com/index.php/2023/02/28/在oracle-linux上部署yunzai-bot-v3保姆式教程/)
+[在Oracle Linux上部署Yunzai Bot v3保姆式教程 – 肚 (iocky.com)](https://iocky.com/index.php/2023/02/28/在oracle-linux上部署yunzai-bot-v3保姆式教程/) [Github](https://github.com/cky008/YunzaiBot-OracleCloud-Installation) [gitee](https://gitee.com/cky008/YunzaiBot-OracleCloud-Installation) 
 
 ## 初始配置
 
